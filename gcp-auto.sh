@@ -26,16 +26,12 @@ conda install -n argument  ipykernel scikit-learn -y
 conda install nb_conda ipykernel -y
 jupyter notebook --generate-config
 
-echo "c = get_config()
-c.NotebookApp.ip = '*'
-c.NotebookApp.open_browser = False
-c.NotebookApp.port = 5000" >> ~/.jupyter/jupyter_notebook_config.py
+echo "c = get_config()\nc.NotebookApp.ip = '*'\nc.NotebookApp.open_browser = False\nc.NotebookApp.port = 5000" >> ~/.jupyter/jupyter_notebook_config.py
 
 #########################################################################################################################
 #Create Pycharm sudo intepreter
 #########################################################################################################################
-echo "#!/bin/bash
-sudo /home/woaibritneyspears/anaconda3/envs/argument/bin/python \"\$\@\"" >> ~/root-python.sh
+echo "#!/bin/bash\nsudo /home/woaibritneyspears/anaconda3/envs/argument/bin/python \"\$\@\"" >> ~/root-python.sh
 chmod +x ~/root-python.sh
 
 
